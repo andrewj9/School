@@ -3,6 +3,11 @@
 % 11.September.2018
 % Andrew S. Johnson
 
+% Housekeeping
+clear
+clc
+clf
+
 % Measured Dimensions:
 l_imp = 20;     % Inches
 w_imp = 1.995;  % Inches
@@ -90,5 +95,11 @@ M = [m1 0 0 0 0 0 0;
   for i=1:7
       F(i) = sqrt(D(i,i))/(2*pi);
   end
-  disp('Modal Frequencies (Hz):');
+  disp('Natural Frequencies (Hz):');
   disp(F);
+  
+  X = linspace(1, 7, 7);
+  for i=1:7
+    plot(X, V(:,i), 'o-');
+    hold on
+  end
