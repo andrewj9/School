@@ -20,50 +20,50 @@ t = t_imp * in2m;       % Meters
 v = l * w * t;          % Cubic Meters
 m = v * density;        % Kg/M^3
 i = (1/12) * w * t^3;
-k = (3 * e * i)/(l^3);  % N/M
+k = stiffness.stiff(l, e, i);  % N/M
 
 % Calculated Element Dimensions and Properties
 l1_imp = 3;
 l1 = l1_imp * in2m;      % Meters
 v1 = l1 * w * t;        % Cubic Meters
 m1 = v1 * density;      % Kilograms
-k1 = (3 * e * i)/(l1^3);  % N/M
+k1 = stiffness.stiff(l1, e, i);  % N/M
 
 l2_imp = 3;
 l2 = l2_imp * in2m;      % Meters
 v2 = l2 * w * t;        % Cubic Meters
 m2 = v2 * density;      % Kilograms
-k2 = (3 * e * i)/(l2^3);  % N/M
+k2 = stiffness.stiff(l2, e, i);  % N/M
 
 l3_imp = 3;
 l3 = l3_imp * in2m;      % Meters
 v3 = l3 * w * t;        % Cubic Meters
 m3 = v3 * density;      % Kilograms
-k3 = (3 * e * i)/(l3^3);  % N/M
+k3 = stiffness.stiff(l3, e, i);  % N/M
 
 l4_imp = 3;
 l4 = l4_imp * in2m;      % Meters
 v4 = l4 * w * t;        % Cubic Meters
 m4 = v4 * density;      % Kilograms
-k4 = (3 * e * i)/(l4^3);  % N/M
+k4 = stiffness.stiff(l4, e, i);  % N/M
 
 l5_imp = 3;
 l5 = l5_imp * in2m;      % Meters
 v5 = l5 * w * t;        % Cubic Meters
 m5 = v5 * density;      % Kilograms
-k5 = (3 * e * i)/(l5^3);  % N/M
+k5 = stiffness.stiff(l5, e, i);  % N/M
 
 l6_imp = 3;
 l6 = l6_imp * in2m;      % Meters
 v6 = l6 * w * t;        % Cubic Meters
 m6 = v6 * density;      % Kilograms
-k6 = (3 * e * i)/(l6^3);  % N/M
+k6 = stiffness.stiff(l6, e, i);  % N/M
 
 l7_imp = 2;
 l7 = l7_imp * in2m;      % Meters
 v7 = l7 * w * t;        % Cubic Meters
 m7 = v7 * density;      % Kilograms
-k7 = (3 * e * i)/(l7^3);  % N/M
+k7 = stiffness.stiff(l7, e, i);  % N/M
 
 % Mass Matrix
 M = [m1 0 0 0 0 0 0;
