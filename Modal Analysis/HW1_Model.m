@@ -33,18 +33,35 @@ M = [m1 0 0 0;
       0 -k2 k2+k3 -k3;
       0 0 -k3 k3+k4];
   
-  % Eigenland
-  [V, D] = eig(K, M);
+ % Damping Matrix
+ for i=1:4
+     for k=1:4
+         C(k,i) = 0.01*M(k,i)+0.0005*K(k,i);
+     end
+ end
+ 
+ % Eigenland
+ [V,D] = eig(K,M);
   
-  % Natural Frequencies
-  for i=1:4
-      F(i) = sqrt(D(i,i))/(2*pi);
-  end
-  disp('Natural Frequencies (Hz):');
-  disp(F);
+ % Natural Frequencies
+ for i=1:4
+     F(i) = sqrt(D(i,i))/(2*pi);
+ end
+ disp('Natural Frequencies (Hz):');
+ disp(F);
   
-  X = linspace(1, 4, 4);
-  for i=1:4
-    plot(X, V(:,i), 'o-');
-    hold on
-  end
+ % Mode Shapes
+ for i=1:4
+     for k=1:4
+         S(k,i) = V(k,i)/min(abs(V(:,i)));
+     end
+ end
+ disp('Mode Shapes:');
+ disp(S);
+  
+ % Plot
+ X = linspace(1, 4, 4);
+ for i=1:4
+   plot(X, V(:,i), 'o-');
+   hold on
+ end
