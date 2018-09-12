@@ -98,8 +98,18 @@ M = [m1 0 0 0 0 0 0;
   disp('Natural Frequencies (Hz):');
   disp(F);
   
-  X = linspace(1, 7, 7);
-  for i=1:7
-    plot(X, V(:,i), 'o-');
-    hold on
-  end
+ % Mode Shapes
+ for i=1:7
+     for k=1:7
+         S(k,i) = V(k,i)/V(1,i);
+     end
+ end
+ disp('Mode Shapes:');
+ disp(S);
+  
+ % Plot
+ X = linspace(1, 7, 7);
+ for i=1:7
+   plot(X, S(:,i), 'o-');
+   hold on
+ end

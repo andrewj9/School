@@ -53,7 +53,7 @@ M = [m1 0 0 0;
  % Mode Shapes
  for i=1:4
      for k=1:4
-         S(k,i) = V(k,i)/min(abs(V(:,i)));
+         S(k,i) = V(k,i)/V(1,i);
      end
  end
  disp('Mode Shapes:');
@@ -62,6 +62,6 @@ M = [m1 0 0 0;
  % Plot
  X = linspace(1, 4, 4);
  for i=1:4
-   plot(X, V(:,i), 'o-');
+   plot(X, S(:,i), 'o-');
    hold on
  end
