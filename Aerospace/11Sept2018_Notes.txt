@@ -1,4 +1,6 @@
 To Do:
 	Pull UNP NS-9 document and email to everyone (Me)
-	Auris ConOps must be totally rewritten
-	
+	Auris ConOps must be totally rewritten (Someone else)
+	Send Mariah senior design schedule (Me)
+	Work with other subteams for all integration and (sub)system testing (Me)
+	Find MOP simulation test procedure document (M: drive, google drive?) (Me)
