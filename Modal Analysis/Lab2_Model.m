@@ -101,9 +101,15 @@ M = [m1 0 0 0 0 0 0;
  % Mode Shapes
  for i=1:7
      for k=1:7
-         S(k,i) = V(k,i)/V(1,i);
+         S(k,i) = V(k,i)/V(1,i) - 1;
      end
  end
+ 
+  % Normalize Mode 7
+ for i=1:7
+     S(i,7) = S(i,7)/500;
+ end
+ 
  disp('Mode Shapes:');
  disp(S);
   
